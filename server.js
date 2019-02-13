@@ -23,6 +23,29 @@ app.get('/api/hello', function(req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+// the api..
+app.get('/api/timestamp/:date_string', function(req, res) {
+  console.log('Query: ', req.params);
+
+  let date_string = req.params.date_string;
+
+  // Is it a valid UNIX timestamp?
+  if (Number(date_string)) {
+    return res.json({
+      unix: Number(date_string),
+      utc: new Date(Number(date_string)).toUTCString()
+    });
+    // If not..
+  } else {
+    let timestamp = new Date(date_string).getTime();
+
+    return res.json({
+      unix: isNaN(timestamp) ? null : timestamp,
+      utc: new Date(date_string).toUTCString()
+    });
+  }
+});
+
 /* If date_string is empty - return the current time */
 app.get('/api/timestamp/', function(req, res) {
   res.json({ time: new Date().toString() });
