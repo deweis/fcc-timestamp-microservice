@@ -12,8 +12,9 @@
 
 #### Example usage:
 
-- https://fcc-timestamp-dw.glitch.me/api/timestamp/2015-12-15
-- https://fcc-timestamp-dw.glitch.me/api/timestamp/1450137600000
+- https://fcc-timestamp-dw.glitch.me/api/timestamp/ .. Returns the current timestamp
+- https://fcc-timestamp-dw.glitch.me/api/timestamp/2015-12-15 .. Returns the below output
+- https://fcc-timestamp-dw.glitch.me/api/timestamp/1450137600000 .. Returns the below output
 
 #### Example output:
 
