@@ -23,7 +23,11 @@ app.get('/api/hello', function(req, res) {
   res.json({ greeting: 'hello API' });
 });
 
-// the api..
+/**
+ * The API code
+ *
+ */
+// request with parameters
 app.get('/api/timestamp/:date_string', function(req, res) {
   console.log('Query: ', req.params);
 
@@ -46,9 +50,13 @@ app.get('/api/timestamp/:date_string', function(req, res) {
   }
 });
 
-/* If date_string is empty - return the current time */
+// request without parameters
 app.get('/api/timestamp/', function(req, res) {
-  res.json({ time: new Date().toString() });
+  const timestamp = new Date();
+  res.json({
+    unix: timestamp.getTime(),
+    utc: timestamp.toUTCString()
+  });
 });
 
 // listen for requests :)
