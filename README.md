@@ -2,7 +2,7 @@
 
 ### User stories :
 
-1. The API endpoint is `GET https://fcc-timestamp-dw.glitch.me/api/timestamp/:date_string?`
+1. The API endpoint is: <br /> `GET https://fcc-timestamp-dw.glitch.me/api/timestamp/:date_string?`
 2. A date string is valid if can be successfully parsed by `new Date(date_string)` (JS) . Note that the unix timestamp needs to be an **integer** (not a string) specifying **milliseconds**. In our test we will use date strings compliant with ISO-8601 (e.g. `"2016-11-20"`) because this will ensure an UTC timestamp.
 3. If the date string is **empty** it should be equivalent to trigger `new Date()`, i.e. the service uses the current timestamp.
 4. If the date string is **valid** the api returns a JSON having the structure
@@ -12,9 +12,9 @@
 
 #### Example usage:
 
-- https://fcc-timestamp-dw.glitch.me/api/timestamp/ .. Returns the current timestamp
-- https://fcc-timestamp-dw.glitch.me/api/timestamp/2015-12-15 .. Returns the below output
-- https://fcc-timestamp-dw.glitch.me/api/timestamp/1450137600000 .. Returns the below output
+- Returns the current timestamp: <br /><br />https://fcc-timestamp-dw.glitch.me/api/timestamp/
+
+- Return the Example output as below: <br /><br />https://fcc-timestamp-dw.glitch.me/api/timestamp/2015-12-15<br />https://fcc-timestamp-dw.glitch.me/api/timestamp/1450137600000 ..
 
 #### Example output:
 
